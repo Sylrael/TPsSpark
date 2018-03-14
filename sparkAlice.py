@@ -42,7 +42,7 @@ if __name__ == "__main__":
 	# Request with methods
 	df.orderBy(df.length, ascending=False).show()
 	df.filter("length=4").orderBy(df.frequency, ascending=False).show()
-	df.filter("length=4").orderBy(df.frequency, ascending=False).show()
+	df.filter("length=15").orderBy(df.frequency, ascending=False).show()
 	
 	# Request with SQL queries
 	#spark.sql("SELECT * from Alice ORDER BY length DESC").show()
