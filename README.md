@@ -10,7 +10,7 @@ Température max par mois sur les deux années 1901 et 1902
 
 ### Trouver une place libre pour vélo
 
-`sparkVelo.py'
+`sparkVelo.py`
 
 Récupérer la liste de toutes les stations de vélo disponibles autour d'un lieu
 
@@ -23,6 +23,8 @@ Lieu à 1km autour du site
 
 `sparkMeteoDataframe.py`
 
+`Min, Max, Avg` pour chaque mois
+
 ### Statistiques sur un texte avec des DataFrames
 
 `sparkAlice.py`
@@ -33,7 +35,7 @@ Utiliser les règles d’extraction des lignes et des mots du texte :
 - Les mots contenant les caractères `@` ou `/` seront supprimés.
 - Les mots doivent être ramenés en caractères minuscules
 
-Résultats
+Résultats : avec DataFrame methods et SQL Queries
 - le mot le plus long du texte
 - le mot de quatre lettres le plus fréquent
 - le mot de quinze lettres le plus fréquent
