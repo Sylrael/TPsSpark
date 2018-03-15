@@ -39,3 +39,11 @@ Résultats : avec DataFrame methods et SQL Queries
 - le mot le plus long du texte
 - le mot de quatre lettres le plus fréquent
 - le mot de quinze lettres le plus fréquent
+
+## Datasources
+
+Transformer une source de données "Non structurées" en un jeu de données Hive/Parquet
+- Charger un fichier JSON dans un dataframe
+- Sauvegarder le dataframe dans une table Hive avec partitionnement
+- Modification de schéma
+- Merge de données de différents schémas
