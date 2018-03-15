@@ -27,10 +27,10 @@ if __name__ == "__main__":
 	# flatMap : retrieve all words
 	# map : remove bad chars at the beginning and at the end of the word
 	# filter : remove words containing '@' and '/' and empty words
+	# mapPartitions : word not in stopwords
 	# map : map for word count (word,1)
 	# reduceByKey : count all words frequencies
 	# map : word with word, frequency and length
-	# mapPartitions : word not in stopwords
 	values = lines.flatMap(lambda line: line.lower().split(' '))\
 					.map(lambda mot: mot.strip(chars_to_remove))\
 					.filter(lambda mot: '@' not in mot and '/' not in mot and mot!='')\
@@ -52,10 +52,16 @@ if __name__ == "__main__":
 	# Most frequent words with 15 letters
 	
 	# Request with methods
-	df.orderBy(df.length, ascending=False).show()
-	df.filter("length=4").orderBy(df.frequency, ascending=False).show()
-	df.filter("length=15").orderBy(df.frequency, ascending=False).show()
+	r1 = df.orderBy(df.length, ascending=False)
+	r2 = df.filter("length=4").orderBy(df.frequency, ascending=False)
+	r3 = df.filter("length=15").orderBy(df.frequency, ascending=False)
 	
+	#Display Results
+	r1.show()#.limit(1).show()
+	r2.show()#.limit(1).show()
+	r3.show()#.limit(1).show()
+	
+	#Debugging
 	#print(values.toDebugString())
 	#raw_input("Press Ctrl+c to quit")
 	
