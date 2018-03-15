@@ -16,7 +16,7 @@ if __name__ == "__main__":
 		.enableHiveSupport()\
 		.getOrCreate()
 	
-	#df = spark.read.json("resourcesTP5\openagenda-publicevents.json")
+	#df = spark.read.json("sys.argv[1]")
 	
 	#records = df.select(explode(df.records.fields).alias("fields"))
 
