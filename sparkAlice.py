@@ -32,7 +32,6 @@ if __name__ == "__main__":
 	# Create DataFrame from RDD
 	df = spark.createDataFrame(values).cache()
 	df.printSchema()
-	df.createTempView("Alice")
 	
 	#Request
 	# Longest words
@@ -45,6 +44,7 @@ if __name__ == "__main__":
 	df.filter("length=15").orderBy(df.frequency, ascending=False).show()
 	
 	# Request with SQL queries
+	#df.createTempView("Alice")
 	#spark.sql("SELECT * from Alice ORDER BY length DESC").show()
 	#spark.sql("SELECT * from Alice WHERE length=4 ORDER BY frequency DESC").show()
 	#spark.sql("SELECT * from Alice WHERE length=15 ORDER BY frequency DESC").show()
